@@ -36,3 +36,8 @@ Registry
 ========
 
 This image is an automated build on the [official Docker Hub](https://hub.docker.com/r/confirm/nginx-ldap).
+
+
+Changelog
+=========
+09/09/17 - Updated to 1.13.5 and added stream, stream-ssl and stream-ssl-preread modules.
