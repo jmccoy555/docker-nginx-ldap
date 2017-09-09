@@ -5,7 +5,7 @@ MAINTAINER confirm IT solutions, pstauffer
 #
 # Define some variables.
 #
-ENV NGINX_VERSION release-1.9.9
+ENV NGINX_VERSION release-1.13.5
 
 #
 # Install needed packages, compile and install.
@@ -37,6 +37,9 @@ RUN \
         --with-http_realip_module \
         --with-pcre \
         --with-debug \
+        --with-stream \
+        --with-stream_ssl_module \
+        --with-stream_ssl_preread_module \
         --conf-path=/etc/nginx/nginx.conf \ 
         --sbin-path=/usr/sbin/nginx \ 
         --pid-path=/var/log/nginx/nginx.pid \ 
