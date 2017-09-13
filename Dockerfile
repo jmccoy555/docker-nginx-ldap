@@ -37,6 +37,7 @@ RUN \
         --with-http_realip_module \
         --with-pcre \
         --with-debug \
+        --with-http_v2_module \
         --with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \

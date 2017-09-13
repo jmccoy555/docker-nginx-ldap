@@ -13,7 +13,7 @@ The docker image can be used like the [official nginx docker image](https://hub.
 But you have to overwrite the configuration file like to configure the LDAP authentication.
 
 ```
-$ docker run --name some-nginx -v /some/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
+$ docker run --name some-nginx -v /some/nginx.conf:/etc/nginx/nginx.conf:ro -d jmccoy555/nginx
 ```
 
 LDAP configuration
@@ -35,9 +35,10 @@ Here are some further links for more configuration hints.
 Registry
 ========
 
-This image is an automated build on the [official Docker Hub](https://hub.docker.com/r/confirm/nginx-ldap).
+This image is an automated build on the [official Docker Hub](https://hub.docker.com/r/jmccoy555/nginx).
 
 
 Changelog
 =========
 09/09/17 - Updated to 1.13.5 and added stream, stream-ssl and stream-ssl-preread modules.
+13/09/17 - Added http2 module, updated readme.
