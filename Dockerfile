@@ -1,6 +1,6 @@
 FROM debian:8.2
 
-MAINTAINER confirm IT solutions, pstauffer
+MAINTAINER James McCoy <james@mcy.email>
 
 #
 # Define some variables.
