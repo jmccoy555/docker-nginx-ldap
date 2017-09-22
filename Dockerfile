@@ -41,6 +41,7 @@ RUN \
         --with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
+        --with-http_auth_request_module \
         --conf-path=/etc/nginx/nginx.conf \ 
         --sbin-path=/usr/sbin/nginx \ 
         --pid-path=/var/log/nginx/nginx.pid \ 
