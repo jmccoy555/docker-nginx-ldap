@@ -32,16 +32,19 @@ RUN \
     git checkout tags/${NGINX_VERSION} && \
     ./auto/configure \
         --add-module=/tmp/nginx-auth-ldap \
+        --with-pcre \
+        --with-debug \
         --with-http_ssl_module \
         --with-http_gzip_static_module \
         --with-http_realip_module \
-        --with-pcre \
-        --with-debug \
+        --with-http_auth_request_module \
         --with-http_v2_module \
+  		--with-http_geoip_module=dynamic \        
         --with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
-        --with-http_auth_request_module \
+  		--with-stream_realip_module \
+  		--with-stream_geoip_module=dynamic \        
         --with-mail \
         --with-mail_ssl_module \
         --conf-path=/etc/nginx/nginx.conf \ 
