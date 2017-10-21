@@ -42,4 +42,4 @@ Changelog
 =========
 09/09/17 - Updated to 1.13.5 and added stream, stream-ssl and stream-ssl-preread modules.
 13/09/17 - Added http2 module, updated readme.
-21/10/17 - Updated to 1.13.6 and added mail abd mail-ssl modules
+21/10/17 - Updated to 1.13.6 and added mail and mail-ssl modules
