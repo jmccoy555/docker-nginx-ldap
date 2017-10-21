@@ -5,7 +5,7 @@ MAINTAINER James McCoy <james@mcy.email>
 #
 # Define some variables.
 #
-ENV NGINX_VERSION release-1.13.5
+ENV NGINX_VERSION release-1.13.6
 
 #
 # Install needed packages, compile and install.
@@ -42,6 +42,8 @@ RUN \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
         --with-http_auth_request_module \
+        --with-mail \
+        --with-mail_ssl_module \
         --conf-path=/etc/nginx/nginx.conf \ 
         --sbin-path=/usr/sbin/nginx \ 
         --pid-path=/var/log/nginx/nginx.pid \ 
