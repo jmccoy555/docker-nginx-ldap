@@ -22,6 +22,7 @@ RUN \
         zlib1g-dev \
         libldap2-dev \
         libssl-dev \
+        libgeoip-dev \
         wget && \
     mkdir /var/log/nginx && \
     mkdir /etc/nginx && \
@@ -39,19 +40,19 @@ RUN \
         --with-http_realip_module \
         --with-http_auth_request_module \
         --with-http_v2_module \
-  		--with-http_geoip_module=dynamic \        
-        --with-stream \
+  		--with-http_geoip_module=dynamic \
+  		--with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
   		--with-stream_realip_module \
-  		--with-stream_geoip_module=dynamic \        
-        --with-mail \
+  		--with-stream_geoip_module=dynamic \
+  		--with-mail \
         --with-mail_ssl_module \
-        --conf-path=/etc/nginx/nginx.conf \ 
-        --sbin-path=/usr/sbin/nginx \ 
-        --pid-path=/var/log/nginx/nginx.pid \ 
-        --error-log-path=/var/log/nginx/error.log \ 
-        --http-log-path=/var/log/nginx/access.log && \ 
+        --conf-path=/etc/nginx/nginx.conf \
+        --sbin-path=/usr/sbin/nginx \
+        --pid-path=/var/log/nginx/nginx.pid \
+        --error-log-path=/var/log/nginx/error.log \
+        --http-log-path=/var/log/nginx/access.log && \
     make install && \
     apt-get purge -y \
         git \
