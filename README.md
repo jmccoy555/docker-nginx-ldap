@@ -40,6 +40,6 @@ This image is an automated build on the [official Docker Hub](https://hub.docker
 
 Changelog
 =========
-09/09/17 - Updated to 1.13.5 and added stream, stream-ssl and stream-ssl-preread modules.
-13/09/17 - Added http2 module, updated readme.
-21/10/17 - Updated to 1.13.6 and added mail and mail-ssl modules
+* 09/09/17 - Updated to 1.13.5 and added stream, stream-ssl and stream-ssl-preread modules.
+* 13/09/17 - Added http2 module, updated readme.
+* 21/10/17 - Updated to 1.13.6 and added mail, mail-ssl,geoip and stream-realip modules.
