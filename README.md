@@ -42,4 +42,5 @@ Changelog
 =========
 * 09/09/17 - Updated to 1.13.5 and added stream, stream-ssl and stream-ssl-preread modules.
 * 13/09/17 - Added http2 module, updated readme.
-* 21/10/17 - Updated to 1.13.6 and added mail, mail-ssl,geoip and stream-realip modules.
+* 21/10/17 - Updated to 1.13.6 and added mail, mail-ssl, geoip and stream-realip modules.
+* 25/02/18 - Updated to 1.13.9.
