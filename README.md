@@ -44,3 +44,6 @@ Changelog
 * 13/09/17 - Added http2 module, updated readme.
 * 21/10/17 - Updated to 1.13.6 and added mail, mail-ssl, geoip and stream-realip modules.
 * 25/02/18 - Updated to 1.13.9.
+* 11/07/18 - Updated to 1.15.1.
+* 24/07/18 - Added http_stub_status_module.
+* 06/02/19 - Switch to debain:stretch-slim and updated version to 1.15.8.

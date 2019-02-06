@@ -1,19 +1,19 @@
-FROM debian:8.2
+FROM debian:stretch-slim
 
 MAINTAINER James McCoy <james@mcy.email>
 
 #
 # Define some variables.
 #
-ENV NGINX_VERSION release-1.13.9
+ENV NGINX_VERSION release-1.15.8
 
 #
 # Install needed packages, compile and install.
 # Remove unused packages and cleanup some directories.
 #
 RUN \
-    apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    apt update && \
+    DEBIAN_FRONTEND=noninteractive apt install -y \
         ca-certificates \
         git \
         gcc \
@@ -21,6 +21,7 @@ RUN \
         libpcre3-dev \
         zlib1g-dev \
         libldap2-dev \
+        libldap-2.4-2 \
         libssl-dev \
         libgeoip-dev \
         wget && \
@@ -37,16 +38,17 @@ RUN \
         --with-debug \
         --with-http_ssl_module \
         --with-http_gzip_static_module \
+        --with-http_stub_status_module \
         --with-http_realip_module \
         --with-http_auth_request_module \
         --with-http_v2_module \
-  		--with-http_geoip_module=dynamic \
-  		--with-stream \
+        --with-http_geoip_module=dynamic \
+        --with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
-  		--with-stream_realip_module \
-  		--with-stream_geoip_module=dynamic \
-  		--with-mail \
+        --with-stream_realip_module \
+        --with-stream_geoip_module=dynamic \
+        --with-mail \
         --with-mail_ssl_module \
         --conf-path=/etc/nginx/nginx.conf \
         --sbin-path=/usr/sbin/nginx \
@@ -54,7 +56,7 @@ RUN \
         --error-log-path=/var/log/nginx/error.log \
         --http-log-path=/var/log/nginx/access.log && \
     make install && \
-    apt-get purge -y \
+    apt purge -y \
         git \
         gcc \
         make \
@@ -63,8 +65,8 @@ RUN \
         libldap2-dev \
         libssl-dev \
         wget && \
-    apt-get autoremove -y && \
-    apt-get -y clean && \
+    apt autoremove -y && \
+    apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /usr/src/* && \
     rm -rf /tmp/* && \
