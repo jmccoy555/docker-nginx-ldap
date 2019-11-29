@@ -5,7 +5,7 @@ MAINTAINER James McCoy <james@mcy.email>
 #
 # Define some variables.
 #
-ENV NGINX_VERSION release-1.15.8
+ENV NGINX_VERSION release-1.17.6
 
 #
 # Install needed packages, compile and install.
