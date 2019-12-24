@@ -50,6 +50,7 @@ RUN \
         --with-stream_geoip_module=dynamic \
         --with-mail \
         --with-mail_ssl_module \
+        --ngx_http_sub_module \
         --conf-path=/etc/nginx/nginx.conf \
         --sbin-path=/usr/sbin/nginx \
         --pid-path=/var/log/nginx/nginx.pid \
