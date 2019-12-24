@@ -43,6 +43,7 @@ RUN \
         --with-http_auth_request_module \
         --with-http_v2_module \
         --with-http_geoip_module=dynamic \
+        --with-http_sub_module \
         --with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
@@ -50,7 +51,6 @@ RUN \
         --with-stream_geoip_module=dynamic \
         --with-mail \
         --with-mail_ssl_module \
-        --ngx_http_sub_module \
         --conf-path=/etc/nginx/nginx.conf \
         --sbin-path=/usr/sbin/nginx \
         --pid-path=/var/log/nginx/nginx.pid \

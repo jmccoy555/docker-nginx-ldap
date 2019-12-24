@@ -48,3 +48,4 @@ Changelog
 * 24/07/18 - Added http_stub_status_module.
 * 06/02/19 - Switch to debain:stretch-slim and updated version to 1.15.8.
 * 20/11/19 - Updated to 1.17.6.
+* 24/12/19 - Added http_sub_module.
